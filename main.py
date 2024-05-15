@@ -43,6 +43,14 @@ class SebulbasPod(Podracer):
     def flame_jet(self, other):
         other.condition = "trashed"
 
+Anakins_pod = AnakinsPod(300, "good", 5000)
+print(f"Anakin's pod max speed: {Anakins_pod.max_speed}")
+Anakins_pod.boost()
+print(f"Anakin's pod max speed after boost: {Anakins_pod.max_speed}")
+SebulbasPod = SebulbasPod(280, "excellent", 10000)
+SebulbasPod.flame_jet(Anakins_pod)
+print(f"Anakin's pod condition after flame jet: {Anakins_pod.condition}")
+
 """
 1.a.Encapsulation: Using classes, it bundles data(max_speed, condition, price,etc) and functions(__init__, repair, boost, etc) into a single unit(class).
 
